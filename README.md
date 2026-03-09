@@ -23,7 +23,6 @@ The model detects and localises damage regions in vehicle images using bounding 
 car-damage-detection/
 ├── car_damage_detection.ipynb   # Full training and analysis pipeline
 ├── README.md
-└── .gitignore
 ```
 
 Model weights (`best.pt`, `last.pt`) and the dataset are not included in this repository. See the sections below for instructions on reproducing them.
